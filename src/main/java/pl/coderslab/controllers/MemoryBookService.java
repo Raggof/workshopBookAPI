@@ -1,12 +1,13 @@
 package pl.coderslab.controllers;
 
 import pl.coderslab.domain.Book;
+import pl.coderslab.service.BookService;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class MemoryBookService implements BookService{
+public class MemoryBookService implements BookService {
 
     private List<Book> books;
 

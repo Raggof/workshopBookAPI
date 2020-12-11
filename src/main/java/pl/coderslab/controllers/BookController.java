@@ -2,9 +2,11 @@ package pl.coderslab.controllers;
 
 import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpStatus;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 import pl.coderslab.domain.Book;
+import pl.coderslab.service.BookService;
 
 import java.util.List;
 
@@ -21,6 +23,10 @@ public class BookController {
     @RequestMapping("/helloBook")
     public Book helloBook(){
         return new Book(1L,"1234567890123","Thinking in Java", "Bruce Eckel", "Helion", " programming");
+    }
+    @RequestMapping("/")
+    public String body(){
+        return "index";
     }
 
     @GetMapping("")
@@ -51,4 +57,6 @@ public class BookController {
     public void updateBook(@RequestBody Book book){
         bookService.update(book);
     }
+
+
 }

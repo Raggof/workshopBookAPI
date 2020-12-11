@@ -1,4 +1,4 @@
-package pl.coderslab.controllers;
+package pl.coderslab.service;
 
 import pl.coderslab.domain.Book;
 

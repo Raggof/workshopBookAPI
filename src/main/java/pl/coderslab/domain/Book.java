@@ -1,13 +1,22 @@
 package pl.coderslab.domain;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "books")
 public class Book {
 
-    private Long id;
-    private String isbn;
-    private String title;
-    private String author;
-    private String publisher;
-    private String type;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Long id;
+    public String isbn;
+    public String title;
+    public String author;
+    public String publisher;
+    public String type;
+
+    public Book() {
+    }
 
     public Book(Long id, String isbn, String title, String author, String publisher, String type) {
         this.id = id;
