@@ -9,6 +9,6 @@ public class LandingController {
 
     @RequestMapping("/")
     public String body(){
-        return "index";
+        return "redirect:/admin/books/all";
     }
 }

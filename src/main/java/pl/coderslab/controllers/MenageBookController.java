@@ -68,4 +68,10 @@ public class MenageBookController {
         return "books/show";
     }
 
+    @GetMapping("/delete/{id}")
+    public String deleteBook(Model model, @PathVariable long id) {
+        bookService.delete(id);
+        return "redirect:/admin/books/all";
+    }
+
 }
